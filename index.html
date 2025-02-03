@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
@@ -19,8 +20,9 @@
       <a-assets>
         <img id="card"
           src="./assets/targets/NovenaLogo/NovenaLogo.png" />
+          <!-- https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf  -->
         <a-asset-item id="avatarModel"
-          src="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf"></a-asset-item>
+          src="./assets/models/bear.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -29,7 +31,7 @@
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1"
           rotation="0 0 0"></a-plane> -->
         <a-gltf-model rotation="90 0 0 " position="0 0 0.1"
-          scale="0.005 0.005 0.005" src="#avatarModel">
+          scale="0.5 0.5 0.5" src="#avatarModel" animation-mixer>
         </a-entity>
       </a-scene>
     </body>
